@@ -12,4 +12,4 @@
 - [ ] Visualizar emails enviados
 
 ## Assets e Fontes:
-- Ícones de iconmonstr
+- Ícones de <a href='https://iconmonstr.com/'>iconmonstr</a>
