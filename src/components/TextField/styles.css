@@ -1,0 +1,57 @@
+.textField{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.textField_wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.textField_label{
+    margin-left: 10px;
+}
+
+.textField input, .textField textarea{
+    color: var(--white);
+    outline: 0;
+    background: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+@media(min-width: 600px){
+    .textField input, .textField textarea{
+        font-size: 18px;
+    }
+}
+
+.textField textarea{
+    border: 1px solid var(--white);
+    height: 200px;
+    resize: none;
+}
+
+@media(min-width: 600px){
+    .textField textarea{
+        height: 100px;
+    }
+}
+
+.errorMessage{
+    color: var(--red);
+    margin-left: 20px;
+}
+
+.fieldText_success{
+    border: 1px solid var(--white);
+}
+
+.fieldText_error{
+    border-color: var(--red);
+}
