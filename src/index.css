@@ -17,11 +17,18 @@ body{
     background-color: var(--primary);
 }
 
+*::selection{
+    background-color: var(--light-blue);
+}
+
 :root{
-    --primary: #222;
+    --primary: rgb(29, 29, 29);
+    --secondary: rgb(59, 59, 59);
+    --tertiary: rgb(48, 48, 48);
     --white: #fdfdfd;
     --light-red: #FADBD8;
     --red: #B03A2E;
     --light-green: #D5F5E3;
     --green: #239B56;
+    --light-blue: #6495ed;
 }

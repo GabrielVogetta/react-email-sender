@@ -1,8 +1,8 @@
+import config from './config';
+
 export default async function sendEmail({to, subject, text}){
     
-    const endpoint = 'https://node-email-sender-gves.herokuapp.com/';
-    
-    const request = await fetch(endpoint, {
+    const request = await fetch(config.endpoint, {
         method: 'POST',
         headers: {
         'Accept': 'application/json',

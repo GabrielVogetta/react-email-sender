@@ -18,11 +18,16 @@ export default function useForm({initialValues, validate}){
     const validateValues = () => {
       setErrors(validate);
     }
+
+    const resetForm = () => {
+      setValues(initialValues);
+    }
   
     return {
       values,
       handleChange,
       errors,
       validateValues,
+      resetForm
     }
   }

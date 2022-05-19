@@ -1,22 +1,18 @@
 import './App.css';
-import Toast from './components/Toast';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Pages from './routes';
 import MainHeader from './components/MainHeader';
-import Form from './components/Form';
+import NavBar from './components/NavBar';
 
 function App() {
 
   return (
     <div className='app'>
-
-      <Toast/>
-
-      <div className='box'>
-
+      <Router>
         <MainHeader/>
-
-        <Form/>
-      </div>
-
+        <Pages/>
+        <NavBar/>
+      </Router>
     </div>
   );
 }

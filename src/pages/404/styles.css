@@ -1,0 +1,140 @@
+.page404{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mail{
+    width: 200px;
+    height: fit-content;
+    background-color: var(--red);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* BACKGROUND */
+
+.mail-background{
+    width: 200px;
+    height: 150px;
+    background-color: var(--tertiary);
+    border-radius: 0 0 8px 8px;
+}
+
+/* BOTTOM */
+
+.bottom-background{
+    width: 0;
+    height: 0;
+    border-left: 101px solid transparent;
+    border-right: 101px solid transparent;
+    border-bottom: 101px solid var(--secondary);
+    border-radius: 8px;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+
+.mail-bottom{
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 80px solid var(--white);
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+}
+
+/* LEFT */
+
+.left-background{
+    width: 0;
+    height: 0;
+    border-top: 75px solid transparent;
+    border-bottom: 75px solid transparent;
+    border-left: 75px solid var(--secondary);
+    border-radius: 0 8px 8px 8px;
+    position: absolute;
+    left: 0;
+    z-index: 2;
+}
+
+.mail-left{
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid var(--white);
+    position: absolute;
+    left: 0;
+    z-index: 3;
+}
+
+/* RIGHT */
+
+.right-background{
+    width: 0;
+    height: 0;
+    border-top: 75px solid transparent;
+    border-bottom: 75px solid transparent;
+    border-right: 75px solid var(--secondary);
+    border-radius: 8px 0px 8px 8px;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+}
+
+.mail-right{
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-right: 60px solid var(--white);
+    position: absolute;
+    right: 0;
+    z-index: 3;
+}
+
+/* PAPER */
+
+.mail-paper{
+    width: 150px;
+    height: 220px;
+    background-color: var(--tertiary);
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    border: 8px solid var(--white);
+    border-radius: 8px;
+    color: var(--white);
+    text-align: center;
+}
+
+.mail-paper p{
+    margin-top: 10px;
+}
+
+/* TAB */
+
+.mail-tab{
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 100px solid var(--tertiary);
+    position: absolute;
+    bottom: 150px;
+    z-index: 0;
+}
+
+.textError{
+    color: var(--red);
+}

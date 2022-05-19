@@ -1,16 +1,33 @@
-import {useState} from 'react';
+import {useEffect, useState, useRef} from 'react';
 import './styles.css';
 import {useToast} from '../../contexts/Toast';
 import TextField from '../TextField';
 import useForm from '../../hooks/useForm';
-import sendEmail from '../../api/sendEmail';
 import Loader from '../Loader';
+import Modal from '../Modal';
+import Button from '../Button';
+import sendEmail from '../../api/sendEmail';
 
-const Form = () => {
+const Form = ({onClose}) => {
 
     const [isLoading, setIsLoading] = useState(false);
 
     const {setToast} = useToast();
+
+    // On click outside
+    const $form = useRef(null);
+    useEffect(() => {
+      const callback = (event) => {
+        if(!$form.current.contains(event.target)){
+          onClose();
+        }
+      };
+      window.addEventListener('click', callback)
+
+      return () => {
+        window.removeEventListener('click', callback)
+      };
+    }, [onClose]);
 
     const form = useForm({
       initialValues: {
@@ -39,7 +56,7 @@ const Form = () => {
         form.validateValues();
 
         if(form.values.to === '' || !form.values.to.includes('@')){
-          return; 
+          return;
         }
 
         // ---------- SEND EMAIL -------------- //
@@ -61,50 +78,66 @@ const Form = () => {
           error: res.error,
           message: res.message
         });
+
+        onClose();
+        setTimeout(() => {
+          form.resetForm();
+        }, 3000);
+
     };
 
     return(
-        <form onSubmit={handleSendMail} autoComplete="off">
+      <Modal>
+        <form onSubmit={handleSendMail} autoComplete="off" ref={$form}>
 
-          <TextField 
+          <button className='closeButton' onClick={onClose}>
+            <img src='./close.svg' alt='Fechar'/>
+          </button>
+
+          <TextField
             name='from' 
-            label='De' 
+            label='De'
             type='input' 
             value='react.email.sender@gmail.com' 
             readOnly
-            />
+          />
 
           <TextField
             name='to' 
             label='Para' 
-            type='input' 
+            type='input'
+            value={form.values.to} 
             error={form.errors.email}
             onChange={form.handleChange}
-          />
+            />
 
           <TextField 
             name='subject' 
             label='Assunto' 
             type='input'
+            value={form.values.subject}
             onChange={form.handleChange}
-          />
+            />
 
           <TextField
             name='text'
             label='Escreva o e-email' 
             type='textarea'
+            value={form.values.text}
             onChange={form.handleChange}
-          />
+            />
 
-          <button type='submit'>
-            {
-              isLoading ?
-              <Loader/>
-              :
-              'Enviar'
-            }
-          </button>
+            <Button
+              styles='submitButton'
+              label={
+                isLoading ?
+                <Loader/>
+                :
+                'Enviar'
+              }
+            />
         </form>
+    </Modal>
     );
 };
 
