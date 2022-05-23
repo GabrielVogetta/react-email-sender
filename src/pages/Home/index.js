@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './styles.css';
 
 import Button from '../../components/Button';
@@ -8,12 +8,6 @@ import Form from "../../components/Form";
 export default function Home(){
 
     const [open, setOpen] = useState(false);
-
-    useEffect(() => {
-        window.addEventListener('scroll', () => {
-          window.scrollTo(0,0);
-        });
-    }, []);
 
     const toggleOpen = () => {
         setOpen(!open);

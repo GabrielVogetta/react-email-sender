@@ -14,20 +14,22 @@ const Form = ({onClose}) => {
 
     const {setToast} = useToast();
 
-    // On click outside
-    const $form = useRef(null);
+    // OnClickOutside
+    const $form = useRef();
+
     useEffect(() => {
       const callback = (event) => {
         if(!$form.current.contains(event.target)){
           onClose();
         }
       };
-      window.addEventListener('click', callback)
-
+      window.addEventListener('click', callback);
+      
       return () => {
-        window.removeEventListener('click', callback)
+        window.removeEventListener('click', callback);
       };
-    }, [onClose]);
+
+    }, []);
 
     const form = useForm({
       initialValues: {
