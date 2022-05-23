@@ -21,6 +21,10 @@ body{
     background-color: var(--light-blue);
 }
 
+ul{
+    list-style: none;
+}
+
 :root{
     --primary: rgb(29, 29, 29);
     --secondary: rgb(59, 59, 59);
@@ -31,4 +35,5 @@ body{
     --light-green: #D5F5E3;
     --green: #239B56;
     --light-blue: #6495ed;
+    --github-background: #161b22;
 }
