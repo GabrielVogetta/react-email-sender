@@ -6,6 +6,13 @@
     border: 1px solid var(--white);
     border-radius: 10px;
     width: 90%;
+    margin: 20px 0;
+}
+
+@media(min-width: 600px){
+    .box{
+        width: 50%;
+    }
 }
 
 .link{
@@ -15,6 +22,10 @@
 
 .link:hover{
     text-decoration: underline;
+}
+
+.link-blue{
+    color: var(--light-blue);
 }
 
 .flex{
@@ -37,6 +48,15 @@
     align-items: center;
     text-align: justify;
     margin: 100px 10px 100px 10px;
+}
+
+@media(min-width: 600px){
+    .about{
+        padding: 10px;
+        align-items: flex-start;
+        margin: 100px auto 100px auto;
+        width: 70%;
+    }
 }
 
 .profileCard{
@@ -63,13 +83,17 @@
     justify-content: center;
 }
 
+@media(min-width: 600px){
+    .githubLink{
+        justify-content: flex-start;
+    }
+}
+
 .subTitle{
     align-self: flex-start;
     margin: 10px 0;
     font-size: 20px;
-}
-
-.techList{
+    width: 100%;
 }
 
 .listSubTitle{
@@ -78,8 +102,4 @@
 
 li{
     margin: 5px 0;
-}
-
-.reposList{
-
 }

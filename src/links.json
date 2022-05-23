@@ -21,6 +21,7 @@
         "reactrouter": "https://res.cloudinary.com/practicaldev/image/fetch/s--bvQtwOo5--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://reacttraining.com/images/blog/reach-react-router-future.png",
         "vercel": "https://github.com/vercel.png",
         "heroku": "https://github.com/heroku.png",
-        "express": "https://github.com/expressjs.png"
+        "express": "https://github.com/expressjs.png",
+        "github": "https://github.com/github.png"
     }
 }

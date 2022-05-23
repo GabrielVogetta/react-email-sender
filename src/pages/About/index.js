@@ -19,7 +19,7 @@ export default function About(){
                         <img         
                             className='githubIcon' 
                             width='20px'
-                            src='https://github.com/github.png' 
+                            src={links.icons.github}
                             alt='Ícone Github'
                         />
                         GabrielVogetta
@@ -40,105 +40,102 @@ export default function About(){
             </p>
 
             <h2 className='subTitle'>Tecnologias</h2>
-            <div className='box'>
-                <ul className='techList'>
+            <ul className='box'>
+                <div className='flex listSubTitle'>
+                    FrontEnd 
+                    <img src='./client.svg' alt='Ícone cliente'/>
+                </div>
 
-                    <div className='flex listSubTitle'>
-                        FrontEnd 
-                        <img src='./client.svg' alt='Ícone cliente'/>
-                    </div>
+                <li>
+                    <a href={links.tech.reactrouter} className='link flex'>
+                        <img 
+                            width='20px' 
+                            src={links.icons.reactjs}
+                            alt='ícone ReactJs'    
+                        />
+                        ReactJs
+                    </a>
+                </li>
 
-                    <li>
-                        <a href={links.tech.reactrouter} className='link flex'>
-                            <img 
-                                width='20px' 
-                                src={links.icons.reactjs}
-                                alt='ícone ReactJs'    
-                            />
-                            ReactJs
-                        </a>
-                    </li>
+                <li>
+                    <a href={links.tech.reactrouter} className='link flex'>
+                        <img 
+                            width='20px' 
+                            src={links.icons.reactrouter}
+                            alt='Ícone React Router'    
+                        />
+                        React Router
+                    </a>
+                </li>
 
-                    <li>
-                        <a href={links.tech.reactrouter} className='link flex'>
-                            <img 
-                                width='20px' 
-                                src={links.icons.reactrouter}
-                                alt='Ícone React Router'    
-                            />
-                            React Router
-                        </a>
-                    </li>
+                <li>
+                    <a href={links.tech.vercel} className='link flex'>
+                        <img 
+                            width='20px' 
+                            src={links.icons.vercel}
+                            alt='Ícone Vercel'    
+                        />
+                        Deploy - 
+                        Vercel
+                    </a>
+                </li>
 
-                    <li>
-                        <a href={links.tech.vercel} className='link flex'>
-                            <img 
-                                width='20px' 
-                                src={links.icons.vercel}
-                                alt='Ícone Vercel'    
-                            />
-                            Deploy - 
-                            Vercel
-                        </a>
-                    </li>
+                <div className='flex listSubTitle'>
+                    Back End 
+                    <img src='./server.svg' alt='Ícone servidor'/>
+                </div>
 
-                    <div className='flex listSubTitle'>
-                        Back End 
-                        <img src='./server.svg' alt='Ícone servidor'/>
-                    </div>
+                <li>
+                    <a href={links.tech.reactrouter} className='link flex'>
+                        <img 
+                            width='20px' 
+                            src={links.icons.nodejs}
+                            alt='Ícone NodeJs'    
+                        />
+                        NodeJs
+                    </a>
+                </li>
 
-                    <li>
-                        <a href={links.tech.reactrouter} className='link flex'>
-                            <img 
-                                width='20px' 
-                                src={links.icons.nodejs}
-                                alt='Ícone NodeJs'    
-                            />
-                            NodeJs
-                        </a>
-                    </li>
+                <li>
+                    <a href={links.tech.reactrouter} className='link flex'>
+                        <img 
+                            width='20px' 
+                            src={links.icons.nodemailer}
+                            alt='Ícone Nodemailer'    
+                        />
+                        Nodemailer
+                    </a>
+                </li>
 
-                    <li>
-                        <a href={links.tech.reactrouter} className='link flex'>
-                            <img 
-                                width='20px' 
-                                src={links.icons.nodemailer}
-                                alt='Ícone Nodemailer'    
-                            />
-                            Nodemailer
-                        </a>
-                    </li>
+                <li>
+                    <a href={links.tech.reactrouter} className='link flex'>
+                        <img 
+                            width='20px' 
+                            src={links.icons.express}
+                            alt='Ícone ExpressJs'    
+                        />
+                        ExpressJs
+                    </a>
+                </li>
 
-                    <li>
-                        <a href={links.tech.reactrouter} className='link flex'>
-                            <img 
-                                width='20px' 
-                                src={links.icons.express}
-                                alt='Ícone ExpressJs'    
-                            />
-                            ExpressJs
-                        </a>
-                    </li>
+                <li>
+                    <a href={links.tech.reactrouter} className='link flex'>
+                        <img
+                            width='20px'
+                            src={links.icons.heroku}
+                            alt='Ícone Heroku'
+                        />
+                        Deploy - Heroku
+                    </a>
+                </li>
 
-                    <li>
-                        <a href={links.tech.reactrouter} className='link flex'>
-                            <img
-                                width='20px'
-                                src={links.icons.heroku}
-                                alt='Ícone Heroku'
-                            />
-                            Deploy - Heroku
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
+            </ul>
     
             <h2 className='subTitle flex'>
                 Repositórios do projeto 
                 <img src='./repo.svg' alt='Ícone repositório'/>
             </h2>
-            <ul className='box reposList'>
+            <ul className='box'>
                 <li>
                     <a href={links.repos.frontend} className='link flex'>
                         <img src='./link.svg' alt='Ícone link'/>
@@ -172,7 +169,7 @@ export default function About(){
                 e aprendendo a fazer o primeiro deploy no heroku.
             </p>
             <p>
-                Para mais projetos incríveis como esse, visite <a href={links.github} className='link'>meu github</a>.
+                Para mais projetos incríveis como esse, visite <a href={links.github} className='link link-blue'>meu github</a>.
             </p>
         </main>
     );
