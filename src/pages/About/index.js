@@ -109,17 +109,6 @@ export default function About(){
 
                 <li>
                     <a href={links.tech.reactrouter} className='link flex'>
-                        <img 
-                            width='20px' 
-                            src={links.icons.express}
-                            alt='Ícone ExpressJs'    
-                        />
-                        ExpressJs
-                    </a>
-                </li>
-
-                <li>
-                    <a href={links.tech.reactrouter} className='link flex'>
                         <img
                             width='20px'
                             src={links.icons.heroku}
@@ -161,15 +150,12 @@ export default function About(){
                 responsável não só por alterar as informações, mas também validar erros.
             </p>
             <p>
-                Do lado do servidor, foi utilizado express e nodemailer, esses são meus primeiros códigos em back end.
+                Do lado do servidor, foi utilizado o nodejs e nodemailer, esses são meus primeiros códigos em back end.
             </p>
             <p>
                 Simples, porém importante para entender como funciona uma api no lado do servidor, 
-                aplicando conceitos de rotas, respostas, headers, métodos e status http, variáveis de ambiente
+                aplicando conceitos de rotas, respostas, headers, métodos http, status http, variáveis de ambiente
                 e aprendendo a fazer o primeiro deploy no heroku.
-            </p>
-            <p>
-                Para mais projetos incríveis como esse, visite <a href={links.github} className='link link-blue'>meu github</a>.
             </p>
         </main>
     );

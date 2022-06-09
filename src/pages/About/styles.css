@@ -22,9 +22,6 @@
 
 .link:hover{
     text-decoration: underline;
-}
-
-.link-blue{
     color: var(--light-blue);
 }
 

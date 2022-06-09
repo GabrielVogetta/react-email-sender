@@ -11,8 +11,7 @@
         "nodemailer": "https://nodemailer.com/about/",
         "reactrouter": "https://v5.reactrouter.com/",
         "vercel": "https://vercel.com",
-        "heroku": "https://www.heroku.com/",
-        "express": "https://expressjs.com/"
+        "heroku": "https://www.heroku.com/"
     },
     "icons": {
         "reactjs": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
@@ -21,7 +20,6 @@
         "reactrouter": "https://res.cloudinary.com/practicaldev/image/fetch/s--bvQtwOo5--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://reacttraining.com/images/blog/reach-react-router-future.png",
         "vercel": "https://github.com/vercel.png",
         "heroku": "https://github.com/heroku.png",
-        "express": "https://github.com/expressjs.png",
         "github": "https://github.com/github.png"
     }
 }

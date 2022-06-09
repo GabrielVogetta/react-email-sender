@@ -13,6 +13,7 @@ export default async function sendEmail({to, subject, text}){
             subject: subject,
             text: text,
         })
-    })
+    });
+
     return await request.json();
 }

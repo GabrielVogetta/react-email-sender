@@ -14,12 +14,12 @@
 - Rotas em React Router
 
 ## Tarefas
-- [x] Api NodeJs 
+- [x] Api NodeJs
 - [x] Tratamento de erros
 - [x] Componente loader
-- [x] Toast 
+- [x] Toast
 - [x] Página 404
-- [ ] Página Sobre
+- [x] Página Sobre
 ---
 Próxima fase
 - [ ] Listar emails enviados
