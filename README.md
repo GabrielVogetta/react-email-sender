@@ -21,6 +21,11 @@
 - [x] Página 404
 - [x] Página Sobre
 ---
+
+Erros 
+- [ ] não possibilitar o envio com destinatário inválido
+    - ex : email@
+
 Próxima fase
 - [ ] Listar emails enviados
 - [ ] Visualizar emails enviados
@@ -31,3 +36,4 @@ Próxima fase
 - Fonte Montserrat de <a href='https://fonts.google.com/specimen/Montserrat'>Google Fonts</a>
 
 ## Imagens do Projeto
+

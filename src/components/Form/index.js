@@ -1,4 +1,4 @@
-import {useEffect, useState, useRef} from 'react';
+import {useState} from 'react';
 import './styles.css';
 import {useToast} from '../../contexts/Toast';
 import TextField from '../TextField';
@@ -7,6 +7,7 @@ import Loader from '../Loader';
 import Modal from '../Modal';
 import Button from '../Button';
 import sendEmail from '../../api/sendEmail';
+import useClickOutside from '../../hooks/useClickOutside';
 
 const Form = ({onClose}) => {
 
@@ -14,22 +15,9 @@ const Form = ({onClose}) => {
 
     const {setToast} = useToast();
 
-    // OnClickOutside
-    const $form = useRef();
-
-    useEffect(() => {
-      const callback = (event) => {
-        if(!$form.current.contains(event.target)){
-          onClose();
-        }
-      };
-      window.addEventListener('click', callback);
-      
-      return () => {
-        window.removeEventListener('click', callback);
-      };
-
-    }, []);
+    const $form = useClickOutside(() => {
+      onClose();
+    });
 
     const form = useForm({
       initialValues: {
@@ -90,56 +78,56 @@ const Form = ({onClose}) => {
 
     return(
       <Modal>
-        <form onSubmit={handleSendMail} autoComplete="off" ref={$form}>
+          <form onSubmit={handleSendMail} autoComplete="off" ref={$form}>
 
-          <button className='closeButton' onClick={onClose}>
-            <img src='./close.svg' alt='Fechar'/>
-          </button>
+            <button type='button' className='closeButton' onClick={onClose}>
+              <img src='./close.svg' alt='Fechar'/>
+            </button>
 
-          <TextField
-            name='from' 
-            label='De'
-            type='input' 
-            value='react.email.sender@gmail.com' 
-            readOnly
-          />
-
-          <TextField
-            name='to' 
-            label='Para' 
-            type='input'
-            value={form.values.to} 
-            error={form.errors.email}
-            onChange={form.handleChange}
+            <TextField
+              name='from' 
+              label='De'
+              type='input' 
+              value='react.email.sender@gmail.com' 
+              readOnly
             />
 
-          <TextField 
-            name='subject' 
-            label='Assunto' 
-            type='input'
-            value={form.values.subject}
-            onChange={form.handleChange}
+            <TextField
+              name='to'
+              label='Para' 
+              type='input'
+              value={form.values.to} 
+              error={form.errors.email}
+              onChange={form.handleChange}
             />
 
-          <TextField
-            name='text'
-            label='Escreva o e-email' 
-            type='textarea'
-            value={form.values.text}
-            onChange={form.handleChange}
+            <TextField 
+              name='subject' 
+              label='Assunto' 
+              type='input'
+              value={form.values.subject}
+              onChange={form.handleChange}
+              />
+
+            <TextField
+              name='text'
+              label='Escreva o e-email' 
+              type='textarea'
+              value={form.values.text}
+              onChange={form.handleChange}
             />
 
-            <Button
-              styles='submitButton'
-              label={
-                isLoading ?
-                <Loader/>
-                :
-                'Enviar'
-              }
-            />
-        </form>
-    </Modal>
+              <Button
+                styles='submitButton'
+                label={
+                  isLoading ?
+                  <Loader/>
+                  :
+                  'Enviar'
+                }
+              />
+          </form>
+      </Modal>
     );
 };
 
