@@ -30,6 +30,7 @@ Próxima fase
 - [ ] Listar emails enviados
 - [ ] Visualizar emails enviados
 - [ ] Design mobile 2.0
+- [ ] Design tablet 
 
 ## Assets e Fontes:
 - Ícones de <a href='https://iconmonstr.com/'>Iconmonstr</a>
@@ -37,3 +38,18 @@ Próxima fase
 
 ## Imagens do Projeto
 
+<div align='center'>
+    <img width='50%' src='https://res.cloudinary.com/dzugtpcap/image/upload/v1655148985/my-projects/react-email-sender/1_jumsgq.png'/>
+</div>
+<div align='center'>
+    <img width='50%' src='https://res.cloudinary.com/dzugtpcap/image/upload/v1655148993/my-projects/react-email-sender/2_nhvite.png'/>
+</div>
+<div align='center'>
+    <img width='50%' src='https://res.cloudinary.com/dzugtpcap/image/upload/v1655149001/my-projects/react-email-sender/3_if1tp4.png'/>
+</div>
+<div align='center'>
+    <img width='50%' src='https://res.cloudinary.com/dzugtpcap/image/upload/v1655149007/my-projects/react-email-sender/4_uiwzyh.png'/>
+</div>
+<div align='center'>
+    <img width='50%' src='https://res.cloudinary.com/dzugtpcap/image/upload/v1655149014/my-projects/react-email-sender/5_yj6xti.png'/>
+</div>
